@@ -128,3 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 config.json
+tmp/cloud.png
+tmp/hum.png
+tmp/pressure.png
+tmp/tmp.png
+tmp/water.png
+tmp/wind.png
