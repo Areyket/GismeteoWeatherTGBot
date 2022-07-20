@@ -15,8 +15,8 @@ def city_search(city):
 
 
 class WeatherData:
-    cloudiness, description, humidity, icon, pressure, temp_air, temp_feels, wind_dir, wind_speed = None, None, None, None, None, None, None, None, None
-
+    # cloudiness, description, humidity, icon, pressure, temp_air, temp_feels, wind_dir, wind_speed = None, None, None, None, None, None, None, None, None
+    pass
 
 def city_weather(city):
     id = city_search(city)
@@ -36,6 +36,3 @@ def city_weather(city):
     wd.temp_water = response["temperature"]["water"]["C"]
 
     return wd
-
-
-pprint(city_weather(city).icon)

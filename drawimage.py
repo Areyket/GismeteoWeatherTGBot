@@ -1,6 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 import getweatherdata as gw
+import h3_forecast as fc
 import cairosvg
 import math
 
@@ -20,10 +21,11 @@ WEIGHT, HEIGHT = (1080, 1080)  # Удалить?
 
 
 def set_font(font, scale):  # Устанавливаем размер
-    done_font = ImageFont.truetype(f"{font}.otf", size=scale)
+    done_font = ImageFont.truetype(f"fonts/{font}.otf", size=scale)
     return done_font
 
 weather = gw.city_weather("Москва")
+forecast = fc.h3_forecast("Москва")
 # weather = gw.WeatherData()
 # weather.temp_feels = 25
 # weather.temp_air = 25
@@ -105,8 +107,6 @@ img.alpha_composite(img_to_combine, (50, 970))
 draw.text((115, 965), f"{weather.temp_water} °", font=set_font("reg", 48))
 
 
-print(set_font("reg", 96).getlength(f"{weather.temp_air} °"))
-print(set_font("reg", 48).getlength(f"{weather.temp_air} °"))
-print(wind_word)
+print(forecast.h3_icon)
 
 img.save("test_text.png")
