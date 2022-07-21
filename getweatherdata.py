@@ -1,11 +1,9 @@
 import json
 import requests
-from pprint import pprint
 
 with open("config.json", "r", encoding="utf-8") as config_file:
     data = json.load(config_file)
 
-city = "Москва"
 headers = data["headers"]
 
 
@@ -15,8 +13,8 @@ def city_search(city):
 
 
 class WeatherData:
-    # cloudiness, description, humidity, icon, pressure, temp_air, temp_feels, wind_dir, wind_speed = None, None, None, None, None, None, None, None, None
     pass
+
 
 def city_weather(city):
     id = city_search(city)

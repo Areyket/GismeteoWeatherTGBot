@@ -1,0 +1,9 @@
+{
+"headers": {
+	   "X-Gismeteo-Token": "ADD_YOUR_GISMETEO_TOKEN",
+	   "Accept-Encoding": "gzip"
+	},
+"token": {
+	"token": "ADD_YOUR_TELEGRAM_BOT_TOKEN"
+}
+}
